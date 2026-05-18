@@ -1,0 +1,77 @@
+{
+  "lang": "pt-BR",
+  "nav": {
+    "features": "Recursos",
+    "how": "Como funciona",
+    "faq": "FAQ",
+    "privacy": "Privacidade",
+    "install": "Instalar"
+  },
+  "hero": {
+    "badge": "Disponível para Chrome e Edge",
+    "title": "Modo noturno do jeito que você quer.",
+    "lead": "MuraNight aplica um modo escuro suave, ajustável e personalizável em qualquer página da web — por URL específica ou em todas as abas, com agendamento automático.",
+    "cta_primary": "Adicionar ao Chrome",
+    "cta_secondary": "Ver recursos",
+    "meta": ["100% local", "Sem coleta de dados", "Grátis"]
+  },
+  "features": {
+    "title": "Tudo o que um bom modo noturno precisa.",
+    "sub": "Controle fino sobre cada página, sem complicação.",
+    "items": [
+      { "icon": "target", "title": "Por URL ou global", "desc": "Aplique apenas em sites específicos ou em todas as páginas. Cada URL guarda sua própria preferência." },
+      { "icon": "sliders-horizontal", "title": "Intensidade ajustável", "desc": "Slider de 0 a 100 (ou até 200% no modo avançado) com aplicação em tempo real." },
+      { "icon": "palette", "title": "Cores personalizadas", "desc": "Tom quente, azul ou sua cor favorita via color picker e HEX." },
+      { "icon": "clock", "title": "Agendamento", "desc": "Defina horário de início e fim para o modo noturno ativar automaticamente." },
+      { "icon": "hard-drive", "title": "Perfis & exportação", "desc": "Salve perfis de uso e exporte/importe configurações em arquivo local." },
+      { "icon": "shield-check", "title": "Privacidade total", "desc": "Tudo roda localmente no seu navegador. Nada é enviado para servidores." }
+    ]
+  },
+  "showcase1": {
+    "title": "Personalize cada detalhe.",
+    "desc": "Escolha entre tom <strong>quente</strong> para reduzir luz azul à noite, <strong>azul</strong> para um look frio e moderno, ou crie sua própria cor."
+  },
+  "showcase2": {
+    "title": "Configurações avançadas, simples de usar.",
+    "desc": "Acesse perfis, idioma, intensidade máxima e gerenciamento de dados em uma interface limpa.",
+    "items": ["Suporte a múltiplos idiomas", "Limite superior de intensidade configurável", "Resetar configurações salvas a qualquer momento", "Importar e exportar perfis em JSON"]
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "sub": "Tudo o que você precisa saber antes de instalar.",
+    "items": [
+      { "q": "O MuraNight coleta meus dados de navegação?", "a": "Não. Todas as configurações ficam armazenadas localmente no seu navegador através do <code>chrome.storage.local</code>. Não há envio de dados, telemetria ou anúncios." },
+      { "q": "Como funciona o modo \"por URL\"?", "a": "A extensão usa o identificador <code>origin + pathname + search</code> (ignorando o hash) para lembrar a configuração de cada página específica. Você pode ativar o modo noturno em um site sem afetar os demais." },
+      { "q": "Funciona no Microsoft Edge?", "a": "Sim. O MuraNight é uma extensão Manifest V3 compatível com Chrome, Edge e outros navegadores baseados em Chromium." },
+      { "q": "Por que a extensão pede acesso a \"todas as URLs\"?", "a": "Para que o modo noturno possa ser aplicado em qualquer site que você escolher. Esse acesso é usado exclusivamente para injetar o estilo escuro — nenhum conteúdo da página é lido, salvo ou transmitido." },
+      { "q": "Posso fazer backup das minhas configurações?", "a": "Sim. Em <em>Settings → File</em> você pode exportar suas configurações em um arquivo JSON e importá-lo depois em outro navegador ou após reinstalar a extensão." },
+      { "q": "É gratuito?", "a": "Sim. Totalmente gratuito, sem anúncios e sem versão paga." }
+    ]
+  },
+  "cta_band": {
+    "title": "Pronto para uma noite mais confortável?",
+    "desc": "Adicione o MuraNight ao seu navegador e personalize cada página do seu jeito.",
+    "btn": "Adicionar ao Chrome"
+  },
+  "footer": {
+    "privacy": "Privacidade",
+    "contact": "Contato",
+    "copy": "MuraNight"
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "updated": "Última atualização: 18 de maio de 2026",
+    "intro": "O MuraNight é uma extensão de navegador que aplica um modo noturno configurável às páginas da web escolhidas pelo usuário. Esta Política de Privacidade descreve quais dados a extensão manipula e como eles são usados.",
+    "sections": [
+      { "h": "1. Quais dados a extensão manipula", "body": "O MuraNight armazena os seguintes dados <strong>localmente</strong> no navegador do usuário:<ul><li>Configurações da extensão, como intensidade, cor, idioma, agendamento e perfis salvos.</li><li>Identificadores de páginas necessários para lembrar preferências por URL. Esses identificadores são baseados na URL da página (<code>origin + pathname + search</code>, excluindo o <code>hash</code>).</li></ul>" },
+      { "h": "2. Como os dados são utilizados", "body": "Esses dados são usados <strong>exclusivamente</strong> para fornecer as funcionalidades da extensão:<ul><li>Aplicar ou remover o modo noturno na página atual.</li><li>Lembrar preferências por página ou globais.</li><li>Restaurar configurações salvas quando o usuário abre uma página novamente.</li><li>Permitir que o usuário exporte ou importe manualmente seu arquivo de configurações.</li></ul>" },
+      { "h": "3. Compartilhamento de dados", "body": "<ul><li>O MuraNight <strong>não vende</strong> dados do usuário.</li><li>O MuraNight <strong>não compartilha</strong> dados do usuário com terceiros.</li><li>O MuraNight <strong>não utiliza</strong> dados do usuário para publicidade, criação de perfis ou analytics.</li></ul>" },
+      { "h": "4. Transmissão de dados", "body": "O MuraNight <strong>não transmite</strong> dados de navegação ou configurações da extensão para servidores do desenvolvedor ou de terceiros. Todo o processamento ocorre localmente no navegador." },
+      { "h": "5. Controle do usuário", "body": "O usuário pode, a qualquer momento:<ul><li>Alterar ou excluir configurações salvas dentro da extensão.</li><li>Redefinir os dados salvos pela interface da extensão.</li><li>Exportar suas configurações para um arquivo local.</li><li>Importar um arquivo de configurações previamente exportado.</li><li>Remover a extensão a qualquer momento pelo navegador.</li></ul>" },
+      { "h": "6. Permissões solicitadas", "body": "A extensão solicita a permissão <code>storage</code> para guardar suas configurações localmente e <code>host_permissions</code> para todas as URLs (<code>&lt;all_urls&gt;</code>) com a única finalidade de injetar o estilo do modo noturno nas páginas em que o usuário ativar a funcionalidade. Nenhum conteúdo das páginas é lido, armazenado ou enviado." },
+      { "h": "7. Segurança", "body": "A extensão foi desenhada para processar suas configurações localmente no navegador e evita execução de código remoto." },
+      { "h": "8. Alterações nesta política", "body": "Eventuais alterações a esta Política de Privacidade serão publicadas nesta mesma página, com a data de atualização revisada no topo." },
+      { "h": "9. Contato", "body": "Em caso de dúvidas sobre esta política ou sobre a extensão, entre em contato pelo e-mail: <a href=\"mailto:contato@gustasoares.com\" class=\"underline\">contato@gustasoares.com</a>." }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MuraNight</title>
+  <meta name="description" content="Per-URL night mode with adjustable intensity, custom colors and scheduling. For Chrome and Edge." />
+  <link rel="icon" type="image/png" href="assets/icon-32.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { warm: '#f4c25a', 'warm-hover': '#e8ae3e' },
+          fontFamily: { sans: ['-apple-system','BlinkMacSystemFont','"Segoe UI"','Roboto','"Helvetica Neue"','Arial','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Summary marker hide */
+    details summary::-webkit-details-marker { display: none; }
+    /* Prose list spacing inside i18n-rendered HTML */
+    .prose-li ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+    .prose-li li { margin-bottom: 0.35rem; }
+    .prose-li code { background: #f1f5f9; border-radius: 4px; padding: 1px 5px; font-size: 0.85em; }
+    [data-lucide] { display: inline-block; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans">
+
+  <!-- ── HEADER ─────────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-20 bg-slate-50/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between gap-4">
+
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-2.5 font-bold text-slate-900 no-underline shrink-0">
+        <img src="assets/icon-32.png" alt="MuraNight" class="w-7 h-7" />
+        MuraNight
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#features" data-i18n="nav.features" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Features</a>
+        <a href="#how"      data-i18n="nav.how"      class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">How it works</a>
+        <a href="#faq"      data-i18n="nav.faq"      class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">FAQ</a>
+        <a href="privacy.html" data-i18n="nav.privacy" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Privacy</a>
+
+        <!-- Lang toggle -->
+        <div class="flex bg-white border border-slate-200 rounded-full p-1 gap-0.5">
+          <button data-lang-btn="pt" class="px-3 py-1 rounded-full text-xs font-semibold transition-colors text-slate-500">PT</button>
+          <button data-lang-btn="en" class="px-3 py-1 rounded-full text-xs font-semibold transition-colors text-slate-500">EN</button>
+        </div>
+
+        <a href="#install" data-i18n="nav.install"
+           class="px-4 py-2 rounded-lg bg-slate-900 text-white text-sm font-semibold hover:bg-slate-700 transition-colors">
+          Install
+        </a>
+      </nav>
+
+      <!-- Mobile: lang + hamburger -->
+      <div class="flex items-center gap-2 md:hidden">
+        <div class="flex bg-white border border-slate-200 rounded-full p-1 gap-0.5">
+          <button data-lang-btn="pt" class="px-3 py-1 rounded-full text-xs font-semibold transition-colors text-slate-500">PT</button>
+          <button data-lang-btn="en" class="px-3 py-1 rounded-full text-xs font-semibold transition-colors text-slate-500">EN</button>
+        </div>
+        <button id="menu-btn" class="p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-slate-50 px-5 py-4 flex flex-col gap-3">
+      <a href="#features"    data-i18n="nav.features" class="text-sm font-medium text-slate-700">Features</a>
+      <a href="#how"         data-i18n="nav.how"      class="text-sm font-medium text-slate-700">How it works</a>
+      <a href="#faq"         data-i18n="nav.faq"      class="text-sm font-medium text-slate-700">FAQ</a>
+      <a href="privacy.html" data-i18n="nav.privacy"  class="text-sm font-medium text-slate-700">Privacy</a>
+      <a href="#install" data-i18n="nav.install"
+         class="w-full text-center px-4 py-2.5 rounded-lg bg-slate-900 text-white text-sm font-semibold">
+        Install
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── HERO ───────────────────────────────────────────────────────────── -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-5xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-xs text-slate-500 mb-5">
+            <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+            <span data-i18n="hero.badge">Available for Chrome and Edge</span>
+          </span>
+          <h1 data-i18n="hero.title" class="text-4xl md:text-5xl font-bold tracking-tight leading-[1.08] mb-5">
+            Night mode, exactly the way you want it.
+          </h1>
+          <p data-i18n="hero.lead" class="text-lg text-slate-500 mb-7 leading-relaxed">
+            MuraNight applies a soft, adjustable dark layer to any page.
+          </p>
+
+          <div id="install" class="flex flex-wrap gap-3 mb-6">
+            <a href="#" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold text-sm hover:bg-slate-700 active:scale-95 transition-all shadow-md">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+              <span data-i18n="hero.cta_primary">Add to Chrome</span>
+            </a>
+            <a href="#features"
+               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-800 font-semibold text-sm hover:bg-slate-100 active:scale-95 transition-all">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span data-i18n="hero.cta_secondary">See features</span>
+            </a>
+          </div>
+
+          <div data-i18n-meta class="flex flex-wrap gap-4 text-sm text-slate-500"></div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-3 shadow-lg">
+          <img src="assets/image.png" alt="MuraNight in action"
+               class="w-full h-auto rounded-xl block" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURES ───────────────────────────────────────────────────────── -->
+    <section id="features" class="py-16 md:py-20">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 data-i18n="features.title" class="text-3xl md:text-4xl font-bold tracking-tight mb-3">Everything a good night mode needs.</h2>
+        <p data-i18n="features.sub"   class="text-slate-500 text-lg mb-10">Fine-grained control over every page.</p>
+        <div data-i18n-features class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- ── SHOWCASE 1 ─────────────────────────────────────────────────────── -->
+    <section id="how" class="py-16 md:py-20 bg-white border-y border-slate-200">
+      <div class="max-w-5xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 data-i18n="showcase1.title" class="text-2xl md:text-3xl font-bold tracking-tight mb-3">Customize every detail.</h3>
+          <p data-i18n-html="showcase1.desc" class="text-slate-500 mb-5 leading-relaxed"></p>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-sm font-medium">
+              <span class="w-3 h-3 rounded-full bg-amber-400 shrink-0"></span>Warm
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-sm font-medium">
+              <span class="w-3 h-3 rounded-full bg-blue-400 shrink-0"></span>Blue
+            </span>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-sm font-medium">
+              <span class="w-3 h-3 rounded-full bg-purple-300 shrink-0"></span>Custom
+            </span>
+          </div>
+        </div>
+        <div class="flex justify-center md:justify-end">
+          <img src="assets/screenshot-main.png" alt="MuraNight main panel"
+               class="w-full max-w-[320px] rounded-2xl border border-slate-200 shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SHOWCASE 2 ─────────────────────────────────────────────────────── -->
+    <section class="py-16 md:py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center md:justify-start order-2 md:order-1">
+          <img src="assets/screenshot-settings.png" alt="MuraNight settings"
+               class="w-full max-w-[320px] rounded-2xl border border-slate-200 shadow-lg" />
+        </div>
+        <div class="order-1 md:order-2">
+          <h3 data-i18n="showcase2.title" class="text-2xl md:text-3xl font-bold tracking-tight mb-3">Advanced settings, simple to use.</h3>
+          <p data-i18n="showcase2.desc"   class="text-slate-500 mb-4 leading-relaxed"></p>
+          <ul data-i18n-showcase2-list class="list-disc list-inside text-slate-500 space-y-1 text-sm"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ ────────────────────────────────────────────────────────────── -->
+    <section id="faq" class="py-16 md:py-20 border-t border-slate-200">
+      <div class="max-w-5xl mx-auto px-5">
+        <h2 data-i18n="faq.title" class="text-3xl md:text-4xl font-bold tracking-tight mb-3">Frequently asked questions</h2>
+        <p data-i18n="faq.sub"   class="text-slate-500 text-lg mb-10">Everything you need to know.</p>
+        <div data-i18n-faq class="flex flex-col gap-3"></div>
+      </div>
+    </section>
+
+    <!-- ── CTA BAND ───────────────────────────────────────────────────────── -->
+    <section class="py-8 px-5 max-w-5xl mx-auto mb-6">
+      <div class="bg-slate-900 text-white rounded-3xl px-8 py-14 text-center">
+        <h2 data-i18n="cta_band.title" class="text-3xl md:text-4xl font-bold tracking-tight mb-3">Ready for a more comfortable night?</h2>
+        <p data-i18n="cta_band.desc"   class="text-slate-300 mb-7 max-w-lg mx-auto">Add MuraNight to your browser.</p>
+        <a href="#" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-900 font-semibold text-sm hover:bg-slate-100 active:scale-95 transition-all shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" y1="8" x2="12" y2="8"/><line x1="3.95" y1="6.06" x2="8.54" y2="14"/><line x1="10.88" y1="21.94" x2="15.46" y2="14"/></svg>
+          <span data-i18n="cta_band.btn">Add to Chrome</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
+    <div class="flex items-center justify-center gap-2 font-semibold text-slate-800 mb-2">
+      <img src="assets/icon-32.png" alt="" class="w-5 h-5" />
+      MuraNight
+    </div>
+    <div class="flex justify-center flex-wrap gap-x-5 gap-y-1">
+      <a href="privacy.html"                   data-i18n="footer.privacy" class="hover:text-slate-800 transition-colors">Privacy</a>
+      <a href="mailto:contato@gustasoares.com" data-i18n="footer.contact" class="hover:text-slate-800 transition-colors">Contact</a>
+    </div>
+    <p class="mt-3">© <span id="year"></span> MuraNight</p>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="main.js"></script>
+</body>
+</html>

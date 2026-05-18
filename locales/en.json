@@ -1,0 +1,77 @@
+{
+  "lang": "en",
+  "nav": {
+    "features": "Features",
+    "how": "How it works",
+    "faq": "FAQ",
+    "privacy": "Privacy",
+    "install": "Install"
+  },
+  "hero": {
+    "badge": "Available for Chrome and Edge",
+    "title": "Night mode, exactly the way you want it.",
+    "lead": "MuraNight applies a soft, adjustable and customizable dark layer to any web page — per specific URL or across all tabs, with automatic scheduling.",
+    "cta_primary": "Add to Chrome",
+    "cta_secondary": "See features",
+    "meta": ["100% local", "No data collection", "Free"]
+  },
+  "features": {
+    "title": "Everything a good night mode needs.",
+    "sub": "Fine-grained control over every page, without the hassle.",
+    "items": [
+      { "icon": "target", "title": "Per-URL or global", "desc": "Apply only on specific sites or across all pages. Each URL keeps its own preference." },
+      { "icon": "sliders-horizontal", "title": "Adjustable intensity", "desc": "Slider from 0 to 100 (or up to 200% in advanced mode) with real-time application." },
+      { "icon": "palette", "title": "Custom colors", "desc": "Warm tone, blue or your favorite color via color picker and HEX input." },
+      { "icon": "clock", "title": "Scheduling", "desc": "Set start and end times to enable night mode automatically." },
+      { "icon": "hard-drive", "title": "Profiles & export", "desc": "Save usage profiles and export/import settings to a local file." },
+      { "icon": "shield-check", "title": "Total privacy", "desc": "Everything runs locally in your browser. Nothing is sent to any server." }
+    ]
+  },
+  "showcase1": {
+    "title": "Customize every detail.",
+    "desc": "Choose a <strong>warm</strong> tone to reduce blue light at night, <strong>blue</strong> for a cool and modern look, or create your own color."
+  },
+  "showcase2": {
+    "title": "Advanced settings, simple to use.",
+    "desc": "Access profiles, language, maximum intensity and data management from a clean interface.",
+    "items": ["Multi-language support", "Configurable upper intensity limit", "Reset saved settings at any time", "Import and export profiles as JSON"]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "sub": "Everything you need to know before installing.",
+    "items": [
+      { "q": "Does MuraNight collect my browsing data?", "a": "No. All settings are stored locally in your browser via <code>chrome.storage.local</code>. There is no data transmission, telemetry or advertising." },
+      { "q": "How does \"per-URL\" mode work?", "a": "The extension uses the <code>origin + pathname + search</code> identifier (ignoring the hash) to remember the configuration of each specific page. You can enable night mode on one site without affecting others." },
+      { "q": "Does it work on Microsoft Edge?", "a": "Yes. MuraNight is a Manifest V3 extension compatible with Chrome, Edge and other Chromium-based browsers." },
+      { "q": "Why does the extension request access to \"all URLs\"?", "a": "So that night mode can be applied to any site you choose. This access is used exclusively to inject the dark style — no page content is read, saved or transmitted." },
+      { "q": "Can I back up my settings?", "a": "Yes. In <em>Settings → File</em> you can export your settings to a JSON file and import it later on another browser or after reinstalling the extension." },
+      { "q": "Is it free?", "a": "Yes. Completely free, no ads, no paid version." }
+    ]
+  },
+  "cta_band": {
+    "title": "Ready for a more comfortable night?",
+    "desc": "Add MuraNight to your browser and customize every page your way.",
+    "btn": "Add to Chrome"
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "copy": "MuraNight"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: May 18, 2026",
+    "intro": "MuraNight is a browser extension that applies a configurable night mode to web pages chosen by the user. This Privacy Policy explains what data the extension handles and how it is used.",
+    "sections": [
+      { "h": "1. What data the extension handles", "body": "MuraNight stores the following data <strong>locally</strong> in the user's browser:<ul><li>Extension settings, such as intensity, color, language, schedule, and saved profiles.</li><li>Website identifiers needed to remember per-page preferences. These identifiers are based on the page URL (<code>origin + pathname + search</code>, excluding the <code>hash</code>).</li></ul>" },
+      { "h": "2. How the data is used", "body": "This data is used <strong>only</strong> to provide the extension's user-facing features:<ul><li>Apply or remove night mode on the current page.</li><li>Remember per-page or global preferences.</li><li>Restore saved preferences when the user opens a page again.</li><li>Let the user export or import their own settings file manually.</li></ul>" },
+      { "h": "3. Data sharing", "body": "<ul><li>MuraNight <strong>does not sell</strong> user data.</li><li>MuraNight <strong>does not share</strong> user data with third parties.</li><li>MuraNight <strong>does not use</strong> user data for advertising, profiling, or analytics.</li></ul>" },
+      { "h": "4. Data transmission", "body": "MuraNight <strong>does not transmit</strong> browsing data or extension settings to the developer's servers or to any third party. All processing happens locally in the browser." },
+      { "h": "5. User control", "body": "Users can, at any time:<ul><li>Change or delete saved settings inside the extension.</li><li>Reset saved data from the extension UI.</li><li>Export their settings to a local file.</li><li>Import a settings file they previously exported.</li><li>Remove the extension at any time through the browser.</li></ul>" },
+      { "h": "6. Requested permissions", "body": "The extension requests the <code>storage</code> permission to store its settings locally, and <code>host_permissions</code> for all URLs (<code>&lt;all_urls&gt;</code>) for the sole purpose of injecting the night-mode style into pages where the user enables the feature. No page content is read, stored, or transmitted." },
+      { "h": "7. Security", "body": "The extension is designed to process its settings locally in the browser and avoids remote code execution." },
+      { "h": "8. Changes to this policy", "body": "Any changes to this Privacy Policy will be published on this page, with the updated date revised at the top." },
+      { "h": "9. Contact", "body": "For questions about this policy or the extension, please contact us at: <a href=\"mailto:contato@gustasoares.com\" class=\"underline\">contato@gustasoares.com</a>." }
+    ]
+  }
+}
